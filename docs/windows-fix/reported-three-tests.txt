@@ -1,0 +1,8 @@
+test_future_schema_rejected (tests.test_storage.StorageTests.test_future_schema_rejected) ... ok
+test_insert_failure_rolls_back_order_and_lines (tests.test_storage.StorageTests.test_insert_failure_rolls_back_order_and_lines) ... ok
+test_unrelated_database_not_modified (tests.test_storage.StorageTests.test_unrelated_database_not_modified) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK

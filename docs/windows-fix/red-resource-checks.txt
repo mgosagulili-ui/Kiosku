@@ -1,0 +1,58 @@
+test_failed_insert_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_failed_insert_releases_connections) ... 
+  test_failed_insert_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_failed_insert_releases_connections) (scenario='test_insert_failure_rolls_back_order_and_lines', connection=1) ... FAIL
+  test_failed_insert_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_failed_insert_releases_connections) (scenario='test_insert_failure_rolls_back_order_and_lines', connection=3) ... FAIL
+test_future_schema_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_future_schema_releases_connections) ... 
+  test_future_schema_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_future_schema_releases_connections) (scenario='test_future_schema_rejected', connection=1) ... FAIL
+test_unrelated_database_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_unrelated_database_releases_connections) ... 
+  test_unrelated_database_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_unrelated_database_releases_connections) (scenario='test_unrelated_database_not_modified', connection=1) ... FAIL
+  test_unrelated_database_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_unrelated_database_releases_connections) (scenario='test_unrelated_database_not_modified', connection=3) ... FAIL
+
+======================================================================
+FAIL: test_failed_insert_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_failed_insert_releases_connections) (scenario='test_insert_failure_rolls_back_order_and_lines', connection=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/kiosku_win32_fix/Kiosku/tests/test_storage_resources.py", line 34, in _assert_connections_closed
+    with self.assertRaisesRegex(sqlite3.ProgrammingError, 'closed database'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProgrammingError not raised
+
+======================================================================
+FAIL: test_failed_insert_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_failed_insert_releases_connections) (scenario='test_insert_failure_rolls_back_order_and_lines', connection=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/kiosku_win32_fix/Kiosku/tests/test_storage_resources.py", line 34, in _assert_connections_closed
+    with self.assertRaisesRegex(sqlite3.ProgrammingError, 'closed database'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProgrammingError not raised
+
+======================================================================
+FAIL: test_future_schema_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_future_schema_releases_connections) (scenario='test_future_schema_rejected', connection=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/kiosku_win32_fix/Kiosku/tests/test_storage_resources.py", line 34, in _assert_connections_closed
+    with self.assertRaisesRegex(sqlite3.ProgrammingError, 'closed database'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProgrammingError not raised
+
+======================================================================
+FAIL: test_unrelated_database_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_unrelated_database_releases_connections) (scenario='test_unrelated_database_not_modified', connection=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/kiosku_win32_fix/Kiosku/tests/test_storage_resources.py", line 34, in _assert_connections_closed
+    with self.assertRaisesRegex(sqlite3.ProgrammingError, 'closed database'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProgrammingError not raised
+
+======================================================================
+FAIL: test_unrelated_database_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_unrelated_database_releases_connections) (scenario='test_unrelated_database_not_modified', connection=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/kiosku_win32_fix/Kiosku/tests/test_storage_resources.py", line 34, in _assert_connections_closed
+    with self.assertRaisesRegex(sqlite3.ProgrammingError, 'closed database'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProgrammingError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.007s
+
+FAILED (failures=5)

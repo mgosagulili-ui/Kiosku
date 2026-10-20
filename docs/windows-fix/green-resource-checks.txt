@@ -1,0 +1,8 @@
+test_failed_insert_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_failed_insert_releases_connections) ... ok
+test_future_schema_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_future_schema_releases_connections) ... ok
+test_unrelated_database_releases_connections (tests.test_storage_resources.StorageConnectionCleanupTests.test_unrelated_database_releases_connections) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK

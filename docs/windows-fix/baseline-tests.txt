@@ -1,0 +1,111 @@
+test_controller_accepts_durable_store (tests.test_controllers.ControllerContractTests.test_controller_accepts_durable_store) ... ok
+test_changed_order_requires_new_review (tests.test_controllers.ControllerTests.test_changed_order_requires_new_review) ... ok
+test_checkout_saves_before_clearing (tests.test_controllers.ControllerTests.test_checkout_saves_before_clearing) ... ok
+test_concurrent_adds_do_not_lose_updates (tests.test_controllers.ControllerTests.test_concurrent_adds_do_not_lose_updates) ... ok
+test_empty_checkout_does_not_allocate_number (tests.test_controllers.ControllerTests.test_empty_checkout_does_not_allocate_number) ... ok
+test_failed_save_keeps_cart (tests.test_controllers.ControllerTests.test_failed_save_keeps_cart) ... ok
+test_injected_menu_and_cart_are_used (tests.test_controllers.ControllerTests.test_injected_menu_and_cart_are_used) ... ok
+test_invalid_item_does_not_change_cart (tests.test_controllers.ControllerTests.test_invalid_item_does_not_change_cart) ... ok
+test_listener_bind_is_deduplicated_and_unbind_works (tests.test_controllers.ControllerTests.test_listener_bind_is_deduplicated_and_unbind_works) ... ok
+test_listener_failure_does_not_hide_committed_order (tests.test_controllers.ControllerTests.test_listener_failure_does_not_hide_committed_order) ... ok
+test_matching_review_can_be_saved (tests.test_controllers.ControllerTests.test_matching_review_can_be_saved) ... ok
+test_preview_does_not_place_order (tests.test_controllers.ControllerTests.test_preview_does_not_place_order) ... ok
+test_remove_and_clear (tests.test_controllers.ControllerTests.test_remove_and_clear) ... ok
+test_repeat_checkout_does_not_duplicate (tests.test_controllers.ControllerTests.test_repeat_checkout_does_not_duplicate) ... ok
+test_retry_after_ambiguous_success_reuses_request_id (tests.test_controllers.ControllerTests.test_retry_after_ambiguous_success_reuses_request_id) ... ok
+test_sessions_have_separate_carts_and_shared_sequence (tests.test_controllers.ControllerTests.test_sessions_have_separate_carts_and_shared_sequence) ... ok
+test_conflicting_mode_rejected (tests.test_main.LaunchTests.test_conflicting_mode_rejected) ... ok
+test_default_is_local_browser (tests.test_main.LaunchTests.test_default_is_local_browser) ... ok
+test_environment_check_is_actionable (tests.test_main.LaunchTests.test_environment_check_is_actionable) ... ok
+test_help_does_not_require_flet (tests.test_main.LaunchTests.test_help_does_not_require_flet) ... ok
+test_help_from_another_directory (tests.test_main.LaunchTests.test_help_from_another_directory) ... ok
+test_invalid_port_rejected (tests.test_main.LaunchTests.test_invalid_port_rejected) ... ok
+test_kiosk_implies_desktop_in_settings (tests.test_main.LaunchTests.test_kiosk_implies_desktop_in_settings) ... ok
+test_operator_tool_exists (tests.test_manage_orders.OperatorAvailabilityTests.test_operator_tool_exists) ... ok
+test_backup_is_readable (tests.test_manage_orders.OperatorTests.test_backup_is_readable) ... ok
+test_csv_formula_like_names_are_text (tests.test_manage_orders.OperatorTests.test_csv_formula_like_names_are_text) ... ok
+test_export_does_not_overwrite (tests.test_manage_orders.OperatorTests.test_export_does_not_overwrite) ... ok
+test_export_one_row_per_order (tests.test_manage_orders.OperatorTests.test_export_one_row_per_order) ... ok
+test_list_orders (tests.test_manage_orders.OperatorTests.test_list_orders) ... ok
+test_missing_ticket_returns_error (tests.test_manage_orders.OperatorTests.test_missing_ticket_returns_error) ... ok
+test_ticket_to_file (tests.test_manage_orders.OperatorTests.test_ticket_to_file) ... ok
+test_ticket_to_stdout (tests.test_manage_orders.OperatorTests.test_ticket_to_stdout) ... ok
+test_wrong_data_directory_is_not_silently_created (tests.test_manage_orders.OperatorTests.test_wrong_data_directory_is_not_silently_created) ... ok
+test_add_merges (tests.test_models.ModelTests.test_add_merges) ... ok
+test_add_rejects_invalid_quantity_without_mutation (tests.test_models.ModelTests.test_add_rejects_invalid_quantity_without_mutation) ... ok
+test_cart_cannot_merge_conflicting_item_details (tests.test_models.ModelTests.test_cart_cannot_merge_conflicting_item_details) ... ok
+test_cart_lines_cannot_mutate_cart (tests.test_models.ModelTests.test_cart_lines_cannot_mutate_cart) ... ok
+test_category_behaviour (tests.test_models.ModelTests.test_category_behaviour) ... ok
+test_combined_quantity_limit_is_atomic (tests.test_models.ModelTests.test_combined_quantity_limit_is_atomic) ... ok
+test_constructor_rejects_invalid_quantity (tests.test_models.ModelTests.test_constructor_rejects_invalid_quantity) ... ok
+test_decrement_removes_at_zero (tests.test_models.ModelTests.test_decrement_removes_at_zero) ... ok
+test_delta_rejects_noninteger (tests.test_models.ModelTests.test_delta_rejects_noninteger) ... ok
+test_duplicate_menu_ids_rejected (tests.test_models.ModelTests.test_duplicate_menu_ids_rejected) ... ok
+test_empty_cart_cannot_produce_ticket (tests.test_models.ModelTests.test_empty_cart_cannot_produce_ticket) ... ok
+test_empty_id_or_name_rejected (tests.test_models.ModelTests.test_empty_id_or_name_rejected) ... ok
+test_empty_menu_rejected (tests.test_models.ModelTests.test_empty_menu_rejected) ... ok
+test_invalid_prices_rejected (tests.test_models.ModelTests.test_invalid_prices_rejected) ... ok
+test_item_properties_are_read_only (tests.test_models.ModelTests.test_item_properties_are_read_only) ... ok
+test_original_menu_preserved (tests.test_models.ModelTests.test_original_menu_preserved) ... ok
+test_price_format (tests.test_models.ModelTests.test_price_format) ... ok
+test_remove_missing_and_clear (tests.test_models.ModelTests.test_remove_missing_and_clear) ... ok
+test_ticket_number_validation (tests.test_models.ModelTests.test_ticket_number_validation) ... ok
+test_ticket_snapshots_cart (tests.test_models.ModelTests.test_ticket_snapshots_cart) ... ok
+test_ticket_text_explains_payment_pending (tests.test_models.ModelTests.test_ticket_text_explains_payment_pending) ... ok
+test_ticket_total_must_match_lines (tests.test_models.ModelTests.test_ticket_total_must_match_lines) ... ok
+test_repository_exists (tests.test_storage.StorageAvailabilityTests.test_repository_exists) ... ok
+test_backup_refuses_existing_file (tests.test_storage.StorageTests.test_backup_refuses_existing_file) ... ok
+test_backup_restores_orders_and_sequence (tests.test_storage.StorageTests.test_backup_restores_orders_and_sequence) ... ok
+test_concurrent_retry_is_one_order (tests.test_storage.StorageTests.test_concurrent_retry_is_one_order) ... ok
+test_corrupt_database_reports_storage_error (tests.test_storage.StorageTests.test_corrupt_database_reports_storage_error) ... ok
+test_default_path_independent_of_cwd (tests.test_storage.StorageTests.test_default_path_independent_of_cwd) ... ok
+test_empty_request_id_rejected (tests.test_storage.StorageTests.test_empty_request_id_rejected) ... ok
+test_env_data_directory (tests.test_storage.StorageTests.test_env_data_directory) ... ok
+test_future_schema_rejected (tests.test_storage.StorageTests.test_future_schema_rejected) ... ok
+test_idempotency (tests.test_storage.StorageTests.test_idempotency) ... ok
+test_insert_failure_rolls_back_order_and_lines (tests.test_storage.StorageTests.test_insert_failure_rolls_back_order_and_lines) ... ok
+test_invalid_query_arguments (tests.test_storage.StorageTests.test_invalid_query_arguments) ... ok
+test_invalid_total_rejected_without_saving (tests.test_storage.StorageTests.test_invalid_total_rejected_without_saving) ... ok
+test_key_cannot_be_reused_for_different_order (tests.test_storage.StorageTests.test_key_cannot_be_reused_for_different_order) ... ok
+test_missing_order_returns_none (tests.test_storage.StorageTests.test_missing_order_returns_none) ... ok
+test_multiple_connections_concurrent_order_numbers (tests.test_storage.StorageTests.test_multiple_connections_concurrent_order_numbers) ... ok
+test_numbers_survive_new_repository (tests.test_storage.StorageTests.test_numbers_survive_new_repository) ... ok
+test_recent_descending_and_limited (tests.test_storage.StorageTests.test_recent_descending_and_limited) ... ok
+test_save_and_reload (tests.test_storage.StorageTests.test_save_and_reload) ... ok
+test_unrelated_database_not_modified (tests.test_storage.StorageTests.test_unrelated_database_not_modified) ... ok
+test_confirmation_handlers_exist (tests.test_views.ViewSourceContractTests.test_confirmation_handlers_exist) ... /usr/lib/python3.13/ast.py:50: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f46f4083010>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/ast.py:50: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f46f40832e0>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/ast.py:50: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f46f4083970>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/ast.py:50: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f46f3f884f0>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/ast.py:50: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f46f3f88220>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_cancel_clear_keeps_cart (tests.test_views.ViewTests.test_cancel_clear_keeps_cart) ... skipped 'Flet must be installed to test actual UI controls'
+test_cancel_review_keeps_cart (tests.test_views.ViewTests.test_cancel_review_keeps_cart) ... skipped 'Flet must be installed to test actual UI controls'
+test_clear_requires_confirmation (tests.test_views.ViewTests.test_clear_requires_confirmation) ... skipped 'Flet must be installed to test actual UI controls'
+test_confirmation_saves_ticket (tests.test_views.ViewTests.test_confirmation_saves_ticket) ... skipped 'Flet must be installed to test actual UI controls'
+test_custom_category_has_fallback_styling (tests.test_views.ViewTests.test_custom_category_has_fallback_styling) ... skipped 'Flet must be installed to test actual UI controls'
+test_duplicate_confirm_event_is_ignored (tests.test_views.ViewTests.test_duplicate_confirm_event_is_ignored) ... skipped 'Flet must be installed to test actual UI controls'
+test_empty_review_does_not_open_confirmation (tests.test_views.ViewTests.test_empty_review_does_not_open_confirmation) ... skipped 'Flet must be installed to test actual UI controls'
+test_failed_save_keeps_review_and_reenables_button (tests.test_views.ViewTests.test_failed_save_keeps_review_and_reenables_button) ... skipped 'Flet must be installed to test actual UI controls'
+test_narrow_layout (tests.test_views.ViewTests.test_narrow_layout) ... skipped 'Flet must be installed to test actual UI controls'
+test_review_does_not_save (tests.test_views.ViewTests.test_review_does_not_save) ... skipped 'Flet must be installed to test actual UI controls'
+test_sheet_closes_when_resized_wide (tests.test_views.ViewTests.test_sheet_closes_when_resized_wide) ... skipped 'Flet must be installed to test actual UI controls'
+test_stale_review_is_closed_without_saving (tests.test_views.ViewTests.test_stale_review_is_closed_without_saving) ... skipped 'Flet must be installed to test actual UI controls'
+test_start_new_order_closes_ticket (tests.test_views.ViewTests.test_start_new_order_closes_ticket) ... skipped 'Flet must be installed to test actual UI controls'
+test_ticket_scrolls_and_can_be_copied (tests.test_views.ViewTests.test_ticket_scrolls_and_can_be_copied) ... skipped 'Flet must be installed to test actual UI controls'
+test_wide_layout (tests.test_views.ViewTests.test_wide_layout) ... skipped 'Flet must be installed to test actual UI controls'
+
+----------------------------------------------------------------------
+Ran 91 tests in 6.186s
+
+OK (skipped=15)

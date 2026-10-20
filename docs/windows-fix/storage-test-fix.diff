@@ -1,0 +1,46 @@
+--- a/tests/test_storage.py
++++ b/tests/test_storage.py
+@@ -1,4 +1,5 @@
+ import importlib.util
++from contextlib import closing
+ from concurrent.futures import ThreadPoolExecutor
+ from pathlib import Path
+ import sqlite3
+@@ -65,12 +66,13 @@
+         self.assertEqual(len(self.store.all()), 1)
+ 
+     def test_insert_failure_rolls_back_order_and_lines(self):
+-        with sqlite3.connect(self.path) as db:
++        # db commits/rolls back first; closing then releases the database file.
++        with closing(sqlite3.connect(self.path)) as db, db:
+             db.execute("CREATE TRIGGER force_failure BEFORE INSERT ON order_lines "
+                        "WHEN NEW.name = 'Matcha Latte' BEGIN SELECT RAISE(ABORT, 'forced'); END")
+         with self.assertRaises(OrderStoreError):
+             self.save()
+-        with sqlite3.connect(self.path) as db:
++        with closing(sqlite3.connect(self.path)) as db, db:
+             self.assertEqual(db.execute('SELECT COUNT(*) FROM orders').fetchone()[0], 0)
+             self.assertEqual(db.execute('SELECT COUNT(*) FROM order_lines').fetchone()[0], 0)
+ 
+@@ -81,18 +83,18 @@
+             SQLiteOrderStore(path)
+ 
+     def test_future_schema_rejected(self):
+-        with sqlite3.connect(self.path) as db:
++        with closing(sqlite3.connect(self.path)) as db, db:
+             db.execute('PRAGMA user_version=99')
+         with self.assertRaises(OrderStoreError):
+             SQLiteOrderStore(self.path)
+ 
+     def test_unrelated_database_not_modified(self):
+         other = Path(self.temp.name) / 'unrelated.sqlite3'
+-        with sqlite3.connect(other) as db:
++        with closing(sqlite3.connect(other)) as db, db:
+             db.execute('CREATE TABLE unrelated(value TEXT)')
+         with self.assertRaises(OrderStoreError):
+             SQLiteOrderStore(other)
+-        with sqlite3.connect(other) as db:
++        with closing(sqlite3.connect(other)) as db, db:
+             self.assertEqual(db.execute('PRAGMA user_version').fetchone()[0], 0)
+ 
+     def test_invalid_total_rejected_without_saving(self):
