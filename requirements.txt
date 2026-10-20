@@ -1,0 +1,2 @@
+# Preserve the API used by this project and install the matching web client.
+flet[web]==0.28.3

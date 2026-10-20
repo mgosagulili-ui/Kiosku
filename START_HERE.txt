@@ -1,0 +1,29 @@
+KIOSKU / LUMAH CAF — CHECKOUT + INVENTORY + HISTORY + REPORTS
+
+WINDOWS
+1. Extract the archive to a writable directory.
+2. Back up your existing data/orders.sqlite3 before replacing source files.
+3. Run SETUP_WINDOWS.bat (requires Python and internet access).
+4. Run RUN_TESTS_WINDOWS.bat (expect zero failures, errors and skips).
+5. Run RUN_WINDOWS.bat.
+6. Open http://127.0.0.1:8550 if it does not open automatically.
+
+All data is stored in data/orders.sqlite3 and survives restarting the app.
+This update archive does NOT include the database file, so existing records
+are not overwritten during extraction. On a new installation, it is created
+when the app first starts.
+Keep and back up this database. Existing v1 SQLite orders are migrated to v2.
+Original menu stock is unknown until manually counted ("Stock not set").
+
+PAGES: Menu / POS, Inventory, Order history, Sales report.
+- Cash: enter the exact amount tendered; app checks total and gives change.
+- QR: manually confirm the successful transfer with the cashier's payment app.
+- Inventory: horizontally wrapped product cards, Select all / multi-select
+  bulk restock with individual quantities, quick +1/+5/+10, categories,
+  add/edit/archive/restore, and movement history.
+- Reports: choose dates in YYYY-MM-DD format (Philippine local time).
+
+This classroom application does not provide admin authentication, real QR
+payment verification or official tax receipts. Test the UI on your actual PC.
+
+See README.md and docs/ACCEPTANCE_CHECKLIST.md.
